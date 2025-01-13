@@ -1,0 +1,37 @@
+[
+    {
+      "id": "f8d2b3f9-22a8-4335-baa1-df27f934d907",
+      "question": "What is the capital of France?",
+      "answer": "Paris",
+      "topic": "Geography",
+      "isFront": true
+    },
+    {
+      "id": "f9b94d5c-92a3-4e2c-9c60-7b6f7f01d728",
+      "question": "What is the largest planet in our solar system?",
+      "answer": "Jupiter",
+      "topic": "Astronomy",
+      "isFront": true
+    },
+    {
+      "id": "d812fb57-c9ad-4c51-8db8-d5b51e55b2a1",
+      "question": "Who wrote the play 'Romeo and Juliet'?",
+      "answer": "William Shakespeare",
+      "topic": "Literature",
+      "isFront": true
+    },
+    {
+      "id": "a5e7c8f3-90f1-46c9-9c4e-780c3b7042a6",
+      "question": "What is the chemical symbol for gold?",
+      "answer": "Au",
+      "topic": "Chemistry",
+      "isFront": true
+    },
+    {
+      "id": "e02e740d-845f-41b1-a99a-3c8d02b8351b",
+      "question": "What is the hardest natural substance on Earth?",
+      "answer": "Diamond",
+      "topic": "Geology",
+      "isFront": true
+    }
+]
