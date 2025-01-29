@@ -1,16 +1,26 @@
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import { FlashCardProps } from '../types';
+import { useState } from 'react';
+function FlashCardComponent({topic,question,answer,additionalText}:FlashCardProps) {
 
-function FlashCardComponent() {
+    const [isFront,setIsFront] = useState(true)
+    const [text, setText] = useState(question)
+   
+    function handleClick(){
+        setIsFront(!isFront)
+        isFront? setText(question):setText(answer)
+    }
+
   return (
     <Card>
-      <Card.Header>Featured</Card.Header>
+      <Card.Header>{topic}</Card.Header>
       <Card.Body>
-        <Card.Title>Special title treatment</Card.Title>
-        <Card.Text>
-          With supporting text below as a natural lead-in to additional content.
-        </Card.Text>
-        <Button variant="primary">Go somewhere</Button>
+        <Card.Title>{text}</Card.Title>
+        {additionalText ?? <Card.Text>
+          {additionalText}
+        </Card.Text>}
+        <Button variant="primary" onClick={()=>handleClick()}>Go somewhere</Button>
       </Card.Body>
     </Card>
   );
