@@ -4,3 +4,4 @@ export type FlashCardProps = {
     answer: string;
     additionalText?: string;
   };
+

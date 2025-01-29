@@ -4,12 +4,15 @@ import { FlashCardProps } from '../types';
 import { useState } from 'react';
 function FlashCardComponent({topic,question,answer,additionalText}:FlashCardProps) {
 
-    const [isFront,setIsFront] = useState(true)
+    const [isFront, setIsFront] = useState(true)
     const [text, setText] = useState(question)
    
     function handleClick(){
-        setIsFront(!isFront)
-        isFront? setText(question):setText(answer)
+        setIsFront(prevState => {
+            const side = !prevState;
+            setText(side ? question : answer);  // Use side directly
+            return side;
+          });
     }
 
   return (
@@ -20,10 +23,10 @@ function FlashCardComponent({topic,question,answer,additionalText}:FlashCardProp
         {additionalText ?? <Card.Text>
           {additionalText}
         </Card.Text>}
-        <Button variant="primary" onClick={()=>handleClick()}>Go somewhere</Button>
+        <Button variant="primary" onClick={handleClick}>Flip</Button>
       </Card.Body>
     </Card>
-  );
+  ); 
 }
 
 export default FlashCardComponent;
